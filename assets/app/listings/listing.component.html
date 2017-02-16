@@ -1,0 +1,15 @@
+<!-- <input type="text" name="" [(ngModel)]="listing.content" > -->
+<article class="panel panel-default">
+  <div class="panel-body">
+    {{listing.content}}
+  </div>
+  <footer class="panel-footer">
+    <div class="listing-user">
+      {{listing.username}}
+    </div>
+    <div class="listing-main">
+      <a href="#" (click)="onUpdate()">Edit</a>
+      <a href="#" (click)="delete()">Delete</a>
+    </div>
+  </footer>
+</article>
