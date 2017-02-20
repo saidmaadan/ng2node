@@ -16,7 +16,10 @@ export class ListingListComponent implements OnInit{
   }
 
   ngOnInit(){
-    this.listings = this.listingService.getListing();
-  }
+    this.listingService.getListings()
+        .subscribe((listings: Listing[]) => { 
+          this.listings = listings;
+        });       
+    }
     
 }

@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 var appRoutes = require('./routes/app');
+var listingRoutes = require('./routes/listings');
+// var appRoutes = require('./routes/app');
 
 var app = express();
 mongoose.connect('localhost:27017/ng2node');
@@ -30,6 +32,7 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.use('/listing', listingRoutes);
 app.use('/', appRoutes);
 
 // catch 404 and forward to error handler

@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Listing } from '../listing.model';
 import { ListingService } from '../listing.service';
 
@@ -11,15 +11,18 @@ import { ListingService } from '../listing.service';
 export class ListingComponent {
   
   @Input() listing: Listing;
-  @Output() updateClicked = new EventEmitter<string>();
+  // @Output() updateClicked = new EventEmitter<string>();
   // color = 'blue';
   constructor(private listingService: ListingService){}
   
   onUpdate(){
-    this.updateClicked.emit('Updated value');
+    this.listingService.editListing(this.listing);
   }
 
-  delete(){
+  onDelete(){
     this.listingService.deleteListing(this.listing)
+        .subscribe(
+            result => console.log(result)
+        );
   }
 }

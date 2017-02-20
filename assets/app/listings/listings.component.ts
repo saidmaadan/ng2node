@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import { Listing } from './listing.model';
 
 @Component({
@@ -8,11 +8,4 @@ import { Listing } from './listing.model';
 })
 export class ListingsComponent {
   
-  @Input() listing: Listing;
-  @Output() updateClicked = new EventEmitter<string>();
-  // color = 'blue';
-  
-  onUpdate(){
-    this.updateClicked.emit('Updated value');
-  }
 }
