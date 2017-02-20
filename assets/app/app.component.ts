@@ -6,5 +6,5 @@ import { Listing } from './listings/listing.model';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  listing: Listing = new Listing('This is the listing one', 'Said');    
+   
 }

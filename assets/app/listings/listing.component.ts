@@ -7,11 +7,12 @@ import { Listing } from './listing.model';
     styleUrls: ['./listing.component.css']
 })
 export class ListingComponent {
+  
   @Input() listing: Listing;
   @Output() updateClicked = new EventEmitter<string>();
-
+  // color = 'blue';
+  
   onUpdate(){
     this.updateClicked.emit('Updated value');
   }
-    
 }

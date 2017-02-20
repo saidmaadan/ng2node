@@ -1,5 +1,6 @@
 <!-- <input type="text" name="" [(ngModel)]="listing.content" > -->
-<article class="panel panel-default">
+<!-- <article class="panel panel-default" [ngStyle]="{backgroundColor: color}" (mouseenter)="color = 'green'" > -->
+<article class="panel panel-default" >
   <div class="panel-body">
     {{listing.content}}
   </div>
@@ -7,9 +8,10 @@
     <div class="listing-user">
       {{listing.username}}
     </div>
-    <div class="listing-main">
+    <div class="listing-main" >
       <a href="#" (click)="onUpdate()">Edit</a>
       <a href="#" (click)="delete()">Delete</a>
     </div>
   </footer>
+
 </article>
