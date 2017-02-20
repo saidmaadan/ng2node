@@ -1,0 +1,17 @@
+<!-- <input type="text" name="" [(ngModel)]="listing.content" > -->
+<!-- <article class="panel panel-default" [ngStyle]="{backgroundColor: color}" (mouseenter)="color = 'green'" > -->
+<article class="panel panel-default" >
+  <div class="panel-body">
+    {{listing.content}}
+  </div>
+  <footer class="panel-footer">
+    <div class="listing-user">
+      {{listing.username}}
+    </div>
+    <div class="listing-main" >
+      <a (click)="onUpdate()">Edit</a>
+      <a (click)="delete()">Delete</a>
+    </div>
+  </footer>
+
+</article>
