@@ -15,6 +15,7 @@ import { ListingListComponent } from "./listings/listing-list/listing-list.compo
 import { ListingFormComponent } from "./listings/listing-form/listing-form.component";
 import { ListingService } from "./listings/listing.service";
 import { routing } from "./app.routing";
+import { AuthService } from "./auth/auth.service";
 
 @NgModule({
     declarations: [
@@ -37,7 +38,7 @@ import { routing } from "./app.routing";
       ReactiveFormsModule,
       HttpModule],
     bootstrap: [AppComponent],
-    providers: [ListingService]
+    providers: [ListingService, AuthService]
 })
 export class AppModule {
 
